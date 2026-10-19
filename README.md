@@ -6,8 +6,8 @@ A multiplayer role-playing table in the browser: a shared chronicle, a codex of 
 
 ## How it works
 
-- **SvelteKit** front end; `src/routes/+page.svelte` is the table itself.
-- **Yjs** keeps the game state identical between players, over WebRTC with IndexedDB persistence (`src/lib/stores/gameStore.ts`); a Cloudflare Durable Object in `server/` relays and persists each world so a table can be rejoined by its room code.
+- **SvelteKit** front end. `src/routes/+page.svelte` is the table itself.
+- **Yjs** keeps the game state identical between players, over WebRTC with IndexedDB persistence (`src/lib/stores/gameStore.ts`). A Cloudflare Durable Object in `server/` relays and persists each world so a table can be rejoined by its room code.
 - **The game master** is Gemini, called with the live codex as context (`src/lib/ai/`). The host supplies the key.
 - **Three.js** dioramas for scenes (`src/lib/components/CinematicDiorama.svelte`).
 
